@@ -17,9 +17,18 @@ public class Clock {
 		//System.out.println("Hours: " + hours);
 		//System.out.println("Minutes: " + minutes);
 		
+		int addHours = 0;
+		String input1 = JOptionPane.showInputDialog(null, "How long will your event take you in minutes?");
+		int time = Integer.parseInt(input1);
+		if (time >= 60) {
+			addHours = time/60;
+		}
+		int addMin = time%60;
 		
-		
-		
-		
+		int newHours = addHours+hours;
+		int newMin = addMin + minutes;
+		//System.out.println("Your event will end at "+ newHours+":"+newMin);
+		JOptionPane.showInputDialog(null, "Your event will end at"+ newHours+":"+newMin);
+		//I couldn't figure out how to make it not ask for an input
 	}
 }
